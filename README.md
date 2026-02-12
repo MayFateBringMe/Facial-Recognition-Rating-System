@@ -32,58 +32,61 @@ Web Framework - Flask, Python to SQL database connector
 Database – Xampp, SQL 
 
 
-🎯 Facial Recognition Rating System
+# 🎯 Facial Recognition Rating System
 
-An embedded AI + IoT computer vision system that detects faces, performs real-time facial analysis, and outputs ratings/identity results through a physical microcontroller interface.
+An embedded **AI + IoT computer vision system** that detects faces, performs real-time facial analysis, and outputs ratings or identity results through a physical microcontroller interface.
 
-This project integrates:
+This project connects **hardware + AI + backend + database** into one complete pipeline.
 
-Embedded hardware (ESP32 + sensors)
-
-Computer vision (OpenCV + Deep Learning)
-
-Backend server (Flask API)
-
-SQL database storage
-
-Physical feedback (LCD/OLED/Servo)
-
-The goal was to build a complete end-to-end pipeline from camera → AI → server → database → hardware response.
+> Camera → AI → Server → Database → Physical Feedback
 
 ---
 
-📸 System Preview
+## 📌 Overview
 
-<img width="697" height="573" alt="image" src="https://github.com/user-attachments/assets/f500e6eb-2cd4-4125-9242-9c47cfa825df" />
-<img width="1115" height="497" alt="image" src="https://github.com/user-attachments/assets/51737c96-d0da-4c74-b7d0-02dc20b7e377" />
-<img width="1025" height="696" alt="image" src="https://github.com/user-attachments/assets/ae26f28f-a0bf-48de-8637-54a427c24979" />
+This system integrates:
 
----
+- 🔌 Embedded hardware (ESP32 + sensors)
+- 🧠 Computer vision (OpenCV + Deep Learning)
+- 🌐 Backend API (Flask)
+- 🗄️ SQL database storage
+- ⚙️ Physical outputs (LCD / OLED / Servo)
 
-✨ Features
-
-📷 Real-time face capture via ESP32 Camera
-
-🧠 Face detection using OpenCV
-
-🤖 Facial analysis using DeepFace / TensorFlow / Keras
-
-⭐ Rating or scoring logic
-
-🖥️ Results displayed on LCD & OLED
-
-🌐 Flask web server for processing & logging
-
-🗄️ SQL database storage
-
-⚙️ Physical interaction via button + servo motor
+The goal was to design a **full end-to-end system**, not just a model — from sensing the real world to producing physical responses.
 
 ---
 
-🧩 Architecture
+## 📸 System Preview
+
+<p align="center">
+  <img width="697" src="https://github.com/user-attachments/assets/f500e6eb-2cd4-4125-9242-9c47cfa825df" />
+  <br><br>
+  <img width="1115" src="https://github.com/user-attachments/assets/51737c96-d0da-4c74-b7d0-02dc20b7e377" />
+  <br><br>
+  <img width="1025" src="https://github.com/user-attachments/assets/ae26f28f-a0bf-48de-8637-54a427c24979" />
+</p>
+
+---
+
+## ✨ Features
+
+- 📷 Real-time face capture via ESP32 Camera  
+- 🧠 Face detection with OpenCV  
+- 🤖 Facial analysis using DeepFace / TensorFlow / Keras  
+- ⭐ Custom rating / scoring logic  
+- 🖥️ Results shown on LCD & OLED displays  
+- 🌐 Flask server for processing & logging  
+- 🗄️ SQL database storage  
+- ⚙️ Button + servo motor for physical interaction  
+
+---
+
+## 🧩 System Architecture
+
+```text
 ESP32 Camera
      ↓
-Capture Image
+Image Capture
      ↓
 Flask Server (Python)
      ↓
@@ -93,50 +96,59 @@ Rating / Recognition Result
      ↓
 SQL Database Storage
      ↓
-ESP32 → LCD/OLED/Servo Feedback
+ESP32 → LCD / OLED / Servo Feedback
+```
 
 ---
 
-🔌 Hardware Components
-| Component             | Purpose                    |
-| --------------------- | -------------------------- |
-| ESP32 Microcontroller | Main controller            |
-| ESP32 Camera          | Image capture              |
-| Ultrasonic Sensor     | Distance/trigger detection |
-| I2C LCD Display       | Text output                |
-| OLED Display          | Status/visual feedback     |
-| Servo Motor           | Physical response          |
-| Button                | Manual trigger             |
-| Battery               | Portable power supply      |
+## 🔌 Hardware Components
+
+| Component | Purpose |
+|-----------|-----------|
+| **ESP32 Microcontroller** | Main controller |
+| **ESP32 Camera** | Image capture |
+| **Ultrasonic Sensor** | Distance-based trigger |
+| **I2C LCD Display** | Text output |
+| **OLED Display** | Status / visual feedback |
+| **Servo Motor** | Physical response mechanism |
+| **Button** | Manual trigger input |
+| **Battery** | Portable power supply |
 
 ---
 
-💻 Software Stack
-AI / Computer Vision
+## 💻 Software Stack
 
-OpenCV
+### 🧠 AI / Computer Vision
+- **OpenCV**
+- **TensorFlow**
+- **Keras**
+- **DeepFace**
 
-TensorFlow
+### 🌐 Backend
+- **Python**
+- **Flask API**
 
-Keras
+### 🗄️ Database
+- **MySQL (XAMPP)**
+- **Python SQL Connector**
 
-DeepFace
-
-Backend
-
-Python
-
-Flask
-
-Database
-
-MySQL (XAMPP)
-
-Python SQL connector
-
-Firmware
-
-Arduino IDE (ESP32 firmware)
+### 🔧 Firmware
+- **Arduino IDE**
+- **ESP32 firmware**
 
 ---
 
+## ⚙️ How It Works
+
+### Flow
+
+1. User approaches device  
+2. Ultrasonic sensor detects presence  
+3. ESP32 camera captures image  
+4. Image sent to Flask server  
+5. OpenCV + DeepFace performs analysis  
+6. Rating/identity computed  
+7. Result stored in SQL database  
+8. LCD/OLED/servo provides feedback  
+
+---
